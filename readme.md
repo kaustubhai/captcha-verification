@@ -17,6 +17,11 @@ const captcha = require('random-verification');
 
 // Generate a random Captcha image
 
+const config = {
+  color: 'R',
+  difficulty: 'medium'
+}
+
 const { captcha, hash } = captcha.generate();
 
 // captcha contains the Captcha image in PNG format as a base4 string.
@@ -43,7 +48,7 @@ if (isValid) {
 ## Configs
 | Key | Default | Description | Possible Keys |
 | -------- | -------- | -------- | -------- |
-| Difficulty   | easy   | Captch noise order | easy, medium
+| Difficulty   | easy   | Captcha noise order | easy, medium
 | Color   | Black   | Color of the text   | r, g, b
 | Len   | 6   | Number of characters in captcha   | 1 - n
 

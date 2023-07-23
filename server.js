@@ -7,7 +7,7 @@ function generate(config) {
     const str = generateRandomString(len);
     let font = '20px ';
     let colour;
-    switch(difficulty.toLowerCase()) {
+    switch(difficulty?.toLowerCase()) {
         case 'easy':
             font += 'HenryPenny'
             break;
@@ -18,7 +18,7 @@ function generate(config) {
             font += 'HenryPenny'
             break;
     }
-    switch(color.toUpperCase()) {
+    switch(color?.toUpperCase()) {
         case 'R':
             colour = '#FF0000'
             break;
