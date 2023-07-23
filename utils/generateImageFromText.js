@@ -4,7 +4,7 @@ registerFont('./fonts/HennyPenny.otf', { family: 'HenryPenny' });
 registerFont('./fonts/Ingrid.ttf', { family: 'Ingrid' });
 
 function createTextImage(text, font = '20px Ingrid', textColor = '#000000') {
-    const canvas = createCanvas(400, 200); // Set the canvas size as per your requirements
+    const canvas = createCanvas(200, 80); // Set the canvas size as per your requirements
     const ctx = canvas.getContext('2d');
   
     // Set the font and color for the text

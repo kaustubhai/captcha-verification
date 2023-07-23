@@ -4,16 +4,13 @@ function generateRandomNumber(cap) {
 
 function mapNumberToAlpha(num) {
     let alpha;
-    if(num >= 0 && num < 26 ) {
-        const alphabetCharCode = 65 + num;
-        alpha = String.fromCharCode(alphabetCharCode)
-        let smallCap = generateRandomNumber(2);
-        if(smallCap === 0)
-            alpha = alpha.toLowerCase()
-    }
-    else {
-        alpha = num - 25
-    }
+    if(num < 0 || num > 25)
+        num = 0;
+    const alphabetCharCode = 65 + num;
+    alpha = String.fromCharCode(alphabetCharCode)
+    let smallCap = generateRandomNumber(2);
+    if(smallCap === 0)
+        alpha = alpha.toLowerCase()
     return alpha
 }
 
@@ -22,11 +19,9 @@ function generateRandomString(len = 6) {
     for(let i = 0; i < len; i++) {
         let num = generateRandomNumber(35);
         let alpha = mapNumberToAlpha(num);
-        str = str + alpha;
+        str = str + alpha + ' ';
     }
     return str;
 }
-
-generateRandomString();
 
 module.exports = { generateRandomString }
