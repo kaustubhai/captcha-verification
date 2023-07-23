@@ -7,7 +7,7 @@ function generate(config) {
     const str = generateRandomString(len);
     let font = '20px ';
     let colour;
-    switch(difficulty) {
+    switch(difficulty.toLowerCase()) {
         case 'easy':
             font += 'HenryPenny'
             break;
@@ -18,7 +18,7 @@ function generate(config) {
             font += 'HenryPenny'
             break;
     }
-    switch(color) {
+    switch(color.toUpperCase()) {
         case 'R':
             colour = '#FF0000'
             break;
@@ -32,9 +32,8 @@ function generate(config) {
             colour = '#000'
             break;
     }
-    const captcha = createTextImage(str, font, color)
+    const captcha = createTextImage(str, font, colour)
     const hash = sha256Hash(str);
-    console.log({ captcha, hash })
     return {
         captcha,
         hash
@@ -46,8 +45,7 @@ function verify(captcha, hash) {
     for(let i = 0; i < captcha.length; i ++) {
         str += captcha[i] + ' ';
     }
-    console.log(verifySHA256Hash(str, hash))
-    return verifySHA256Hash(captcha, hash)
+    return verifySHA256Hash(str, hash)
 }
 
 

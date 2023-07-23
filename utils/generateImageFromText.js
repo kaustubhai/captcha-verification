@@ -1,9 +1,9 @@
 const { createCanvas, registerFont } = require('canvas');
 
-registerFont('./fonts/HennyPenny.otf', { family: 'HenryPenny' });
-registerFont('./fonts/Ingrid.ttf', { family: 'Ingrid' });
+registerFont('./node_modules/captcha-verification/fonts/HennyPenny.otf', { family: 'HenryPenny' });
+registerFont('./node_modules/captcha-verification/fonts/Ingrid.ttf', { family: 'Ingrid' });
 
-function createTextImage(text, font = '20px Ingrid', textColor = '#000000') {
+function createTextImage(text, font, textColor) {
     const canvas = createCanvas(200, 80); // Set the canvas size as per your requirements
     const ctx = canvas.getContext('2d');
   

@@ -40,6 +40,14 @@ if (isValid) {
 }
 ```
 
+## Configs
+| Key | Default | Description | Possible Keys |
+| -------- | -------- | -------- | -------- |
+| Difficulty   | easy   | Captch noise order | easy, medium
+| Color   | Black   | Color of the text   | r, g, b
+| Len   | 6   | Number of characters in captcha   | 1 - n
+
+
 ## License
 
 This package is open-source and available under the [MIT License](https://opensource.org/licenses/MIT).
