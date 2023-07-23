@@ -1,0 +1,29 @@
+{
+  "name": "captcha-maker",
+  "version": "1.0.0",
+  "description": "this creates a new captcha based upon your configs and help you keep robiots off your website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaustubhai/captcha-maker.git"
+  },
+  "keywords": [
+    "captcha",
+    "generator",
+    "robots",
+    "verification"
+  ],
+  "author": "kaustubhai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaustubhai/captcha-maker/issues"
+  },
+  "homepage": "https://github.com/kaustubhai/captcha-maker#readme",
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "tesseract.js": "^4.1.1"
+  }
+}
