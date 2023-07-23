@@ -1,5 +1,5 @@
 {
-  "name": "captcha-maker",
+  "name": "captcha-verification",
   "version": "1.0.0",
   "description": "this creates a new captcha based upon your configs and help you keep robiots off your website",
   "main": "server.js",
