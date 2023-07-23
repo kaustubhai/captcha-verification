@@ -16,23 +16,27 @@ npm install captcha-verification
 const captcha = require('random-verification');
 
 // Generate a random Captcha image
+
 const { captcha, hash } = captcha.generate();
 
 // captcha contains the Captcha image in PNG format as a base4 string.
-
 // hash contains the image content in encrypted format to verify the user input
-
 // You can send the captchaImage to the user in the response or save it to a file.
 
 // To verify the user's input against the generated Captcha:
+
 const userInput = 'user-input-from-form';
 
 const isValid = captcha.verify(hash, userInput);
 
 if (isValid) {
+  
   // Captcha input is valid, proceed with the user's request.
+
 } else {
+  
   // Captcha input is invalid, show an error message or take appropriate action.
+
 }
 ```
 
