@@ -4,7 +4,7 @@ registerFont('./node_modules/captcha-verification/fonts/HennyPenny.otf', { famil
 registerFont('./node_modules/captcha-verification/fonts/Ingrid.ttf', { family: 'Ingrid' });
 
 function createTextImage(text, font, textColor) {
-    const canvas = createCanvas(200, 80); // Set the canvas size as per your requirements
+    const canvas = createCanvas(1200, 400); // Set the canvas size as per your requirements
     const ctx = canvas.getContext('2d');
   
     // Set the font and color for the text
@@ -18,7 +18,7 @@ function createTextImage(text, font, textColor) {
   
     // Center the text on the canvas
     const x = (canvas.width - textWidth) / 2;
-    const y = (canvas.height - textHeight) / 2;
+    const y = (canvas.height - textHeight);
   
     // Draw the text on the canvas
     ctx.fillText(text, x, y);

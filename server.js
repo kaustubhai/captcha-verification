@@ -5,7 +5,7 @@ const { generateRandomString } = require('./utils/randomStringGenerator')
 function generate(config) {
     const { len, difficulty, color} = config
     const str = generateRandomString(len);
-    let font = '20px ';
+    let font = '120px ';
     let colour;
     switch(difficulty?.toLowerCase()) {
         case 'easy':

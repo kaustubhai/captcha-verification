@@ -1,6 +1,6 @@
 {
   "name": "captcha-verification",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "this creates a new captcha based upon your configs and help you keep robiots off your website",
   "main": "server.js",
   "scripts": {
