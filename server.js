@@ -2,7 +2,7 @@ const { sha256Hash, verifySHA256Hash } = require('./utils/cryptoEncDec');
 const { createTextImage } = require('./utils/generateImageFromText');
 const { generateRandomString } = require('./utils/randomStringGenerator')
 
-function generate(config) {
+async function generate(config) {
     const { len, difficulty, color} = config
     const str = generateRandomString(len);
     let font = '120px ';
@@ -32,7 +32,7 @@ function generate(config) {
             colour = '#000'
             break;
     }
-    const captcha = createTextImage(str, font, colour)
+    const captcha =await  createTextImage(str, font, colour)
     const hash = sha256Hash(str);
     return {
         captcha,
