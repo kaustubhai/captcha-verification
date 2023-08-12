@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/kaustubhai/captcha-verification#readme",
   "dependencies": {
+    "axios": "^1.4.0",
     "canvas": "^2.11.2",
     "sharp": "^0.32.4"
   }
